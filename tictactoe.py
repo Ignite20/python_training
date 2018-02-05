@@ -70,7 +70,7 @@ if game_mode == 2:
 
         keyY = input("insert Y coordinate: ")
 
-        if len(keyX) == 1 and len(keyY) == 1 and ord("0") < ord(keyX) < ord("2") and ord("0") < ord(keyY) < ord("2"):
+        if len(keyX) == 1 and len(keyY) == 1 and ord("0") <= ord(keyX) <= ord("2") and ord("0") <= ord(keyY) <= ord("2"):
             if int(keyX) < 3 and int(keyY) < 3 and keyX is not None and keyY is not None and board[int(keyY)][int(keyY)] == " ":
                 board[int(keyX)][int(keyY)] = "X" if isXTurn else "Y"
                 if isXTurn:
